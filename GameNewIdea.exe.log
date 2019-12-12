@@ -1,0 +1,1275 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {-176, 0, 0, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x19E0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426D9E in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 10 2019 22:02:08, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2019 22:02:11
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x41F0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426D9E in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 10 2019 22:02:35, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2019 22:02:37
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0xFF8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426D9E in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 10 2019 22:02:52, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2019 22:02:55
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x3F1C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426D9E in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:06:05, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:06:08
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x42F0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426D9A in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (66):
+
+     64:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     65: 
+=>   66:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     67: 
+     68:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:08:10, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:08:13
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x4AE0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DA7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:10:17, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:10:20
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x1008 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DA7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:10:30, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:10:32
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRE0, Thread: 0x1008 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DA7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:10:30, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:10:33
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {-176, 0, 0, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x410C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DA3 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:10:59, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:11:01
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x37F4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DA3 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:12:16, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:12:19
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x37F4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DA3 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:12:16, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:12:19
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x45FC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DB3 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (72):
+
+     70:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     71: 
+=>   72:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     73: 
+     74:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (72):
+
+     70:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     71: 
+=>   72:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     73: 
+     74:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:13:25, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:13:28
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x491C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DB3 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:14:58, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:15:01
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x3EE0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DB3 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:15:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:15:27
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x3EE0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DB3 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (69):
+
+     67:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     68: 
+=>   69:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     70: 
+     71:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:15:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:15:27
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x3B24 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DF7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (73):
+
+     71:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     72: 
+=>   73:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     74: 
+     75:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (73):
+
+     71:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     72: 
+=>   73:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     74: 
+     75:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:23:17, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:23:20
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe, файл: C:\Users\Mihail\Desktop\c++\TX\TXLib.h, строка: 11862, функция: bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double),
+
+Сообщение: Прямоугольник копируемой области {11264, 0, 11440, 176} не полностью лежит внутри изображения-источника {0, 0, 11264, 176}, функция txAlphaBlend() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300], Instance: 0x000000000056E8B0 (64-bit), Flags: CMdRe0, Thread: 0x2AFC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x000000000040E876 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: _txError() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (9172)
+# 1 0x0000000000420945 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: txAlphaBlend() at C:/Users/Mihail/Desktop/c++/TX/TXLib.h (11862)
+
+# 2 0x0000000000426DF7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Car1() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (73):
+
+     71:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     72: 
+=>   73:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     74: 
+     75:         txSleep (100);
+
+# 3 0x00000000004269E7 in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: Track() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (29):
+
+     27:     if (car2 == NULL) txMessageBox ("Not Found");
+     28: 
+=>   29:     Car1 (Track, car1, car2);
+     30: 
+     31:     }
+
+# 4 0x000000000042687C in C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe: main() at C:/Users/Mihail/Desktop/c++/New game/GameNewIdea.cpp (13):
+
+     11:     txCreateWindow (1900, 1080);
+     12: 
+=>   13:     Track ();
+     14: 
+     15:     return 0;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txAlphaBlend(HDC, double, double, double, double, HDC, double, double, double) at C:\Users\Mihail\Desktop\c++\TX\TXLib.h (11862):
+
+  11860:         {
+  11861: $       SetLastError (ERROR_INVALID_DATA);
+=>11862: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  11863:                   "функция txAlphaBlend() работать не будет." _ xSource _ ySource _ xSource + width _ ySource + height _ 0 _ 0 _ size.x _ size.y);
+  11864:         }
+
+# 1 in void Car1(HDC, HDC, HDC) at C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.cpp (73):
+
+     71:         txAlphaBlend (txDC (), x1, y1,  car, 0, car1, xSource1);
+     72: 
+=>   73:         txAlphaBlend (txDC (), x2, y2, carX, 0, car2, xSource2);
+     74: 
+     75:         txSleep (100);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-12-01 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Mihail\Desktop\c++\TX\TXLib.h
+Compiled:	Dec 12 2019 19:24:24, GNU g++ 9.2.0, std=201402L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2019 19:24:26
+
+Run file:	C:\Users\Mihail\Desktop\c++\New game\GameNewIdea.exe
+Directory:	C:\Users\Mihail\Desktop\c++\New game
+
+--------------------------------------------------
